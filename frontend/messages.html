@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Messages | Spandan Portfolio</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="message-header">
+    <h1>Portfolio Messages</h1>
+
+    <p>
+      This page shows messages submitted from your portfolio contact form.
+    </p>
+
+    <div class="message-actions">
+      <a href="index.html" class="back-btn">Back to Portfolio</a>
+
+      <button id="refreshBtn" class="refresh-btn" type="button">
+        Refresh Messages
+      </button>
+
+      <button id="clearLocalBtn" class="clear-btn" type="button">
+        Clear Local Messages
+      </button>
+    </div>
+  </header>
+
+
+  <main class="message-page">
+
+    <section class="message-stats">
+      <div class="stat-card">
+        <h2 id="totalMessages">0</h2>
+        <p>Total Messages</p>
+      </div>
+    </section>
+
+
+    <section class="messages-section">
+      <h2>Received Messages</h2>
+
+      <p id="messageSource" class="message-source"></p>
+
+      <div id="messageContainer" class="message-container">
+        <!-- Messages will appear here using message.js -->
+      </div>
+    </section>
+
+  </main>
+
+
+  <script src="message.js"></script>
+</body>
+</html>
