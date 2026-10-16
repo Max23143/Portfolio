@@ -1,0 +1,32 @@
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+
+# Credentials
+.env
+backend/.env
+
+# Private messages
+backend/data/
+messages.json
+
+# Local databases
+*.sqlite
+*.db
+
+# Operating system
+.DS_Store
+Thumbs.db
+
+# Vercel
+.vercel/
+
+venv/
+.venv/
+__PYcache__/
+backend/message.json

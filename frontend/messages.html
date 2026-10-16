@@ -1,60 +1,56 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1">
+
+  <meta name="robots"
+    content="noindex,nofollow">
 
   <title>Messages | Spandan Portfolio</title>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+    href="assets/style.css">
 </head>
+
 <body>
 
-  <header class="message-header">
-    <h1>Portfolio Messages</h1>
+<main
+  class="container"
+  style="
+    min-height:100vh;
+    display:grid;
+    place-items:center;
+  ">
 
-    <p>
-      This page shows messages submitted from your portfolio contact form.
+  <div
+    class="panel"
+    style="
+      max-width:550px;
+      padding:40px;
+      text-align:center;
+    ">
+
+    <h1>Private Messages</h1>
+
+    <p style="color:#9eaec2">
+      The public message dashboard is disabled
+      to protect visitors' personal information.
+      Messages can only be accessed through
+      the authenticated backend inbox.
     </p>
 
-    <div class="message-actions">
-      <a href="index.html" class="back-btn">Back to Portfolio</a>
+    <a class="btn btn-primary"
+       href="index.html">
+      Back to Portfolio
+    </a>
 
-      <button id="refreshBtn" class="refresh-btn" type="button">
-        Refresh Messages
-      </button>
+  </div>
 
-      <button id="clearLocalBtn" class="clear-btn" type="button">
-        Clear Local Messages
-      </button>
-    </div>
-  </header>
+</main>
 
-
-  <main class="message-page">
-
-    <section class="message-stats">
-      <div class="stat-card">
-        <h2 id="totalMessages">0</h2>
-        <p>Total Messages</p>
-      </div>
-    </section>
-
-
-    <section class="messages-section">
-      <h2>Received Messages</h2>
-
-      <p id="messageSource" class="message-source"></p>
-
-      <div id="messageContainer" class="message-container">
-        <!-- Messages will appear here using message.js -->
-      </div>
-    </section>
-
-  </main>
-
-
-  <script src="message.js"></script>
 </body>
 </html>
