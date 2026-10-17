@@ -1,30 +1,23 @@
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1">
-
-  <meta name="description"
-    content="Professional CV of Spandan Neupane, aspiring software developer and De Montfort University student.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 
   <title>Spandan Neupane | Curriculum Vitae</title>
 
-  <link rel="icon"
-    href="assets/favicon.svg"
-    type="image/svg+xml">
+  <meta
+    name="description"
+    content="CV of Spandan Neupane, aspiring software developer and De Montfort University student.">
 
-  <link rel="preconnect"
-    href="https://fonts.googleapis.com">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 
-  <link rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;600;700&display=swap"
     rel="stylesheet">
 
   <link rel="stylesheet" href="assets/cv.css">
@@ -32,315 +25,214 @@
 
 <body>
 
-<!-- CV TOOLBAR -->
+  <nav class="toolbar">
+    <a href="index.html">← Back to portfolio</a>
 
-<nav class="cv-toolbar" aria-label="CV actions">
+    <button
+      type="button"
+      onclick="window.print()">
+      Print / Save as PDF ↗
+    </button>
+  </nav>
 
-  <a href="index.html" class="back-link">
-    ← Back to Portfolio
-  </a>
+  <main class="resume">
 
-  <button
-    type="button"
-    onclick="window.print()">
-    Print / Save PDF ↗
-  </button>
+    <header class="resume-header">
 
-</nav>
+      <div>
+        <p class="kicker">CURRICULUM VITAE</p>
 
-<main class="resume">
+        <h1>Spandan Neupane</h1>
 
-<!-- HEADER -->
+        <p class="role">
+          Aspiring Software Developer · Frontend Developer
+        </p>
 
-<header class="resume-header">
+        <p class="muted">
+          De Montfort University student ·
+          Open to entry-level opportunities
+        </p>
+      </div>
 
-  <div>
+      <div class="contact-details">
 
-    <p class="eyebrow">CURRICULUM VITAE</p>
+        <span>United Kingdom</span>
 
-    <h1>Spandan Neupane</h1>
+        <a href="mailto:neupanespandan16@gmail.com">
+          neupanespandan16@gmail.com
+        </a>
 
-    <p class="role">
-      Aspiring Software Developer
-      <span>·</span>
-      Frontend Development
-    </p>
+        <a
+          href="https://github.com/Max23143"
+          target="_blank"
+          rel="noopener noreferrer">
+          github.com/Max23143 ↗
+        </a>
 
-    <p class="intro">
-      De Montfort University student
-      • UK-based
-      • Open to entry-level software development opportunities
-    </p>
+        <a href="index.html">
+          Portfolio website ↗
+        </a>
+      </div>
 
-  </div>
+    </header>
 
-  <div class="resume-contact">
+    <section>
 
-    <span>United Kingdom</span>
-
-    <a href="mailto:neupanespandan16@gmail.com">
-      neupanespandan16@gmail.com
-    </a>
-
-    <a
-      href="https://github.com/Max23143"
-      target="_blank"
-      rel="noopener noreferrer">
-      github.com/Max23143 ↗
-    </a>
-
-    <a href="index.html">
-      View Portfolio ↗
-    </a>
-
-  </div>
-
-</header>
-
-<!-- PROFESSIONAL PROFILE -->
-
-<section class="resume-section">
-
-  <h2>Professional Profile</h2>
-
-  <p>
-    Motivated, early-career software developer with
-    hands-on experience building responsive web interfaces
-    and interactive personal projects using HTML,
-    CSS and JavaScript.
-
-    Interested in solving practical problems through
-    thoughtful design, maintainable code and continuous
-    improvement.
-
-    Developing additional knowledge of Python,
-    backend APIs and application architecture through
-    university studies and independent learning.
-  </p>
-
-</section>
-
-<!-- TECHNICAL SKILLS -->
-
-<section class="resume-section">
-
-  <h2>Technical Skills</h2>
-
-  <div class="skill-lines">
-
-    <p>
-      <strong>Frontend</strong>
-      <span>
-        HTML5, CSS3, JavaScript, responsive design,
-        Flexbox, CSS Grid and DOM events
-      </span>
-    </p>
-
-    <p>
-      <strong>Backend (Learning)</strong>
-      <span>
-        Python, FastAPI fundamentals, HTTP requests
-        and API integration concepts
-      </span>
-    </p>
-
-    <p>
-      <strong>Developer Tools</strong>
-      <span>
-        Visual Studio Code, GitHub
-        and browser developer tools
-      </span>
-    </p>
-
-    <p>
-      <strong>Professional Strengths</strong>
-      <span>
-        Problem-solving, attention to detail,
-        project organisation and debugging
-      </span>
-    </p>
-
-  </div>
-
-</section>
-
-<!-- PROJECTS -->
-
-<section class="resume-section">
-
-  <h2>Selected Projects</h2>
-
-  <!-- RESTAURANT PROJECT -->
-
-  <article class="resume-project">
-
-    <div class="project-title">
-
-      <h3>Restaurant Ordering System</h3>
-
-      <a
-        href="https://github.com/Max23143/restaurant-ordering-system"
-        target="_blank"
-        rel="noopener noreferrer">
-        Repository ↗
-      </a>
-
-    </div>
-
-    <ul>
-
-      <li>
-        Explored a restaurant ordering workflow,
-        including menu presentation and web
-        application organisation.
-      </li>
-
-      <li>
-        Practised developing user-focused functionality
-        and structuring a multi-feature project.
-      </li>
-
-    </ul>
-
-  </article>
-
-  <!-- CALCULATOR -->
-
-  <article class="resume-project">
-
-    <div class="project-title">
-
-      <h3>JavaScript Calculator</h3>
-
-      <a
-        href="https://github.com/Max23143/Calculator"
-        target="_blank"
-        rel="noopener noreferrer">
-        Repository ↗
-      </a>
-
-    </div>
-
-    <ul>
-
-      <li>
-        Created an interactive calculator to practise
-        JavaScript logic, DOM events and handling user input.
-      </li>
-
-      <li>
-        Applied problem-solving and responsive styling
-        techniques.
-      </li>
-
-    </ul>
-
-  </article>
-
-  <!-- APPLICATION -->
-
-  <article class="resume-project">
-
-    <div class="project-title">
-
-      <h3>Application Project</h3>
-
-      <a
-        href="https://github.com/Max23143/application"
-        target="_blank"
-        rel="noopener noreferrer">
-        Repository ↗
-      </a>
-
-    </div>
-
-    <ul>
-
-      <li>
-        Explored frontend page layouts,
-        project file structure and organising
-        application code.
-      </li>
-
-    </ul>
-
-  </article>
-
-</section>
-
-<!-- EDUCATION -->
-
-<section class="resume-section">
-
-  <h2>Education</h2>
-
-  <div class="education-line">
-
-    <div>
-
-      <h3>De Montfort University</h3>
+      <h2>Professional Profile</h2>
 
       <p>
-        University studies in progress.
+        Motivated aspiring software developer with project
+        experience creating responsive web interfaces and
+        interactive applications using HTML, CSS and JavaScript.
+        Interested in problem-solving, clean code and accessible
+        design. Currently developing additional knowledge of
+        Python, APIs and backend application concepts while
+        studying at De Montfort University.
       </p>
 
-      <!-- REPLACE WITH YOUR ACTUAL DEGREE TITLE -->
+    </section>
+
+    <section>
+
+      <h2>Technical Skills</h2>
+
+      <div class="skills">
+
+        <p>
+          <strong>Frontend</strong>
+          <span>
+            HTML5, CSS3, JavaScript, responsive layouts,
+            Flexbox, Grid, DOM interactions
+          </span>
+        </p>
+
+        <p>
+          <strong>Backend (learning)</strong>
+          <span>
+            Python, FastAPI concepts,
+            HTTP methods and API integration
+          </span>
+        </p>
+
+        <p>
+          <strong>Developer tools</strong>
+          <span>
+            Git, GitHub, Visual Studio Code,
+            browser developer tools
+          </span>
+        </p>
+
+        <p>
+          <strong>Strengths</strong>
+          <span>
+            Problem-solving, attention to detail,
+            project organisation and willingness to learn
+          </span>
+        </p>
+
+      </div>
+    </section>
+
+    <section>
+
+      <h2>Selected Technical Projects</h2>
+
+      <article class="cv-project">
+
+        <div class="cv-project-head">
+          <h3>Restaurant Ordering System</h3>
+
+          <a
+            href="https://github.com/Max23143/restaurant-ordering-system"
+            target="_blank"
+            rel="noopener noreferrer">
+            GitHub ↗
+          </a>
+        </div>
+
+        <p>
+          Explored restaurant menu presentation,
+          ordering workflows and web application
+          structure through a practical coding project.
+        </p>
+
+      </article>
+
+      <article class="cv-project">
+
+        <div class="cv-project-head">
+          <h3>JavaScript Calculator</h3>
+
+          <a
+            href="https://github.com/Max23143/Calculator"
+            target="_blank"
+            rel="noopener noreferrer">
+            GitHub ↗
+          </a>
+        </div>
+
+        <p>
+          Built an interactive calculator to practise
+          event handling, user input and programming logic.
+        </p>
+
+      </article>
+
+      <article class="cv-project">
+
+        <div class="cv-project-head">
+          <h3>Application Project</h3>
+
+          <a
+            href="https://github.com/Max23143/application"
+            target="_blank"
+            rel="noopener noreferrer">
+            GitHub ↗
+          </a>
+        </div>
+
+        <p>
+          Practised application layout, frontend development
+          and organising project files.
+        </p>
+
+      </article>
+
+    </section>
+
+    <section>
+
+      <h2>Education</h2>
+
+      <div class="education">
+
+        <div>
+          <h3>De Montfort University</h3>
+
+          <p>
+            BSc (Hons) Computer Science
+          </p>
+        </div>
+
+        <strong>2024–2027</strong>
+
+      </div>
+
+    </section>
+
+    <section>
+
+      <h2>Professional Development</h2>
 
       <p>
-        <strong>
-          Bsc (Hons) in Computer Science
-        </strong>
+        Continuing to strengthen frontend development skills
+        and explore Python, APIs, testing and backend
+        fundamentals through hands-on study and personal projects.
       </p>
 
-    </div>
+    </section>
 
-    <strong>2024 – 2027</strong>
-
-  </div>
-
-</section>
-
-<!-- PROFESSIONAL DEVELOPMENT -->
-
-<section class="resume-section">
-
-  <h2>Professional Development</h2>
-
-  <p>
-    Building proficiency in JavaScript,
-    frontend engineering and application debugging.
-
-    Continuing to explore backend development,
-    APIs and data-driven application design.
-
-    Interested in graduate and junior software
-    development opportunities.
-  </p>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer class="resume-footer">
-
-  Portfolio:
-  <a href="index.html">
-    Return to my work
-  </a>
-
-  <span>·</span>
-
-  GitHub:
-  <a
-    href="https://github.com/Max23143"
-    target="_blank"
-    rel="noopener noreferrer">
-    Max23143
-  </a>
-
-</footer>
-
-</main>
+  </main>
 
 </body>
 </html>

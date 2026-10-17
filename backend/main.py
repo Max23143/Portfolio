@@ -2,8 +2,7 @@
 """
 Alternative FastAPI entry point.
 
-Run from the Portfolio root:
-
+Run:
 python -m uvicorn backend.main:app --reload
 """
 

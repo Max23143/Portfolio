@@ -1,63 +1,36 @@
 
 "use strict";
 
-/* ============================
-   BACKEND CONFIGURATION
-============================ */
+// MOBILE NAVIGATION
 
-// If you deploy your FastAPI backend separately,
-// replace this with its public HTTPS address.
-//
-// Example:
-// const API_BASE_URL = "https://my-api.example.com";
-//
-// Leave empty for local development.
+const menu = document.getElementById("menuToggle");
+const links = document.getElementById("navLinks");
 
-const API_BASE_URL = "";
+if (menu && links) {
+  menu.addEventListener("click", () => {
+    const open = links.classList.toggle("open");
 
-/* ============================
-   MOBILE MENU
-============================ */
-
-const menuButton = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
-
-if (menuButton && navLinks) {
-
-  function closeMenu() {
-    navLinks.classList.remove("open");
-
-    menuButton.setAttribute(
-      "aria-expanded",
-      "false"
-    );
-  }
-
-  menuButton.addEventListener("click", () => {
-
-    const open = navLinks.classList.toggle("open");
-
-    menuButton.setAttribute(
+    menu.setAttribute(
       "aria-expanded",
       String(open)
     );
 
+    menu.setAttribute(
+      "aria-label",
+      open ? "Close menu" : "Open menu"
+    );
   });
 
-  navLinks.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", closeMenu);
-  });
-
-  document.addEventListener("keydown", event => {
-    if (event.key === "Escape") {
-      closeMenu();
-    }
+  links.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      links.classList.remove("open");
+      menu.setAttribute("aria-expanded", "false");
+      menu.setAttribute("aria-label", "Open menu");
+    });
   });
 }
 
-/* ============================
-   AUTOMATIC YEAR
-============================ */
+// CURRENT YEAR
 
 const year = document.getElementById("year");
 
@@ -65,74 +38,80 @@ if (year) {
   year.textContent = new Date().getFullYear();
 }
 
-/* ============================
-   SCROLL ANIMATIONS
-============================ */
+// SCROLL ANIMATIONS
 
-const items = document.querySelectorAll(".reveal");
-
-const reduceMotion = window.matchMedia(
-  "(prefers-reduced-motion: reduce)"
-).matches;
+const reveal = document.querySelectorAll(".reveal");
 
 if (
   "IntersectionObserver" in window &&
-  !reduceMotion
+  !window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches
 ) {
-
   const observer = new IntersectionObserver(
     entries => {
-
       entries.forEach(entry => {
-
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
           observer.unobserve(entry.target);
         }
-
       });
-
     },
-    { threshold: 0.08 }
+    { threshold: 0.07 }
   );
 
-  items.forEach(item => observer.observe(item));
+  reveal.forEach(el => observer.observe(el));
 
 } else {
-
-  items.forEach(item => {
-    item.classList.add("visible");
-  });
-
+  reveal.forEach(el => el.classList.add("visible"));
 }
 
-/* ============================
-   CONTACT FORM
-============================ */
+// CONTACT FORM
+
+// Make sure this email is the address you want
+// visitors to contact.
+
+const CONTACT_EMAIL = "neupanespandan16@gmail.com";
 
 const form = document.getElementById("contactForm");
 
 if (form) {
 
   const status = document.getElementById("formStatus");
-
-  const sendButton = document.getElementById("sendButton");
-
+  const submit = document.getElementById("sendButton");
   const fallback = document.getElementById("emailFallback");
+  const keyField = document.getElementById("web3AccessKey");
 
-  function showStatus(message, kind) {
-
+  function show(message, type = "") {
     status.textContent = message;
+    status.className = "form-status " + type;
+  }
 
-    status.className = `form-status ${kind}`;
+  function gmailDraft(name, email, message) {
 
+    const subject = encodeURIComponent(
+      "Portfolio enquiry from " + name
+    );
+
+    const body = encodeURIComponent(
+      "Name: " + name +
+      "\nEmail: " + email +
+      "\n\nMessage:\n" + message
+    );
+
+    return (
+      "https://mail.google.com/mail/?view=cm&fs=1&to=" +
+      encodeURIComponent(CONTACT_EMAIL) +
+      "&su=" + subject +
+      "&body=" + body
+    );
   }
 
   form.addEventListener("submit", async event => {
 
     event.preventDefault();
 
-    if (!form.reportValidity()) {
+    if (!form.reportValidity() || submit.disabled) {
       return;
     }
 
@@ -148,173 +127,132 @@ if (form) {
       .getElementById("contactMessage")
       .value.trim();
 
-    if (!name || !email || message.length < 10) {
+    const key = keyField.value.trim();
 
-      showStatus(
-        "Please enter your details and a message of at least 10 characters.",
-        "error"
-      );
+    const bot = form.querySelector(
+      '[name="botcheck"]'
+    );
 
+    if (bot?.checked) {
       return;
     }
 
-    /* EMAIL FALLBACK */
+    if (name.length < 2 || message.length < 10) {
+      show(
+        "Please provide your name and a message of at least 10 characters.",
+        "error"
+      );
+      return;
+    }
 
-    const subject = encodeURIComponent(
-      `Portfolio enquiry from ${name}`
-    );
+    // Prepare an email draft to use if needed.
 
-    const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\n\n${message}`
-    );
+    const draftUrl = gmailDraft(name, email, message);
 
-    fallback.href =
-      `mailto:neupanespandan16@gmail.com?subject=${subject}&body=${body}`;
+    fallback.href = draftUrl;
+    fallback.hidden = false;
 
-    fallback.hidden = true;
-
-    /* FORM SUBMISSION */
-
-    sendButton.disabled = true;
-
-    sendButton.textContent = "Sending...";
-
-    showStatus("Contacting the server...", "");
-
-    let base = API_BASE_URL.replace(/\/$/, "");
-
-    // Frontend on port 5500 uses backend on port 8000.
+    // NO ACCESS KEY:
+    // Open Gmail rather than pretending
+    // the message has been submitted.
 
     if (
-      !base &&
-      ["localhost", "127.0.0.1"].includes(
-        window.location.hostname
-      ) &&
-      window.location.port === "5500"
+      !key ||
+      key.includes("YOUR_WEB3FORMS_ACCESS_KEY")
     ) {
+      show(
+        "A Gmail draft is opening. Review it and click Send in Gmail to deliver your message.",
+        "info"
+      );
 
-      base = "http://127.0.0.1:8000";
-
+      window.location.assign(draftUrl);
+      return;
     }
+
+    // WEB3FORMS SUBMISSION
+
+    submit.disabled = true;
+    submit.textContent = "Sending…";
+
+    show("Submitting your message…");
+
+    const controller = new AbortController();
+
+    const timeout = setTimeout(
+      () => controller.abort(),
+      15000
+    );
 
     try {
 
-      const controller = new AbortController();
+      const payload = {
+        access_key: key,
+        name,
+        email,
+        message,
 
-      const timeout = setTimeout(
-        () => controller.abort(),
-        12000
+        subject:
+          "Portfolio enquiry from " + name,
+
+        from_name: "Spandan Portfolio",
+
+        botcheck: ""
+      };
+
+      const response = await fetch(
+        "https://api.web3forms.com/submit",
+        {
+          method: "POST",
+
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+
+          body: JSON.stringify(payload),
+
+          signal: controller.signal
+        }
       );
 
-      let response;
+      const result = await response.json();
 
-      try {
-
-        response = await fetch(
-          `${base}/api/contact`,
-          {
-            method: "POST",
-
-            headers: {
-              "Content-Type": "application/json"
-            },
-
-            body: JSON.stringify({
-              name,
-              email,
-              message
-            }),
-
-            signal: controller.signal
-          }
-        );
-
-      } finally {
-
-        clearTimeout(timeout);
-
-      }
-
-      const data = await response
-        .json()
-        .catch(() => ({}));
-
-      if (!response.ok) {
-
+      if (!response.ok || result.success !== true) {
         throw new Error(
-          data.detail ||
-          "The contact service is currently unavailable."
+          result.message ||
+          "Submission was not accepted"
         );
-
       }
 
-      if (data.delivery === "emailed") {
-
-        showStatus(
-          "Thank you! Your email was sent successfully.",
-          "ok"
-        );
-
-      } else if (data.delivery === "saved_locally") {
-
-        showStatus(
-          "Message saved in your private local inbox. It has not been emailed.",
-          "warn"
-        );
-
-      } else {
-
-        throw new Error(
-          "The backend did not confirm delivery."
-        );
-
-      }
+      show(
+        "Your message was accepted by the form service. Thank you!",
+        "ok"
+      );
 
       form.reset();
+      fallback.hidden = true;
 
     } catch (error) {
 
-      showStatus(
-        "Your message could not be delivered. Please use the email option below.",
+      console.warn(
+        "Contact form failed:",
+        error
+      );
+
+      show(
+        "Your message could not be submitted. Use the Gmail link below to send it instead.",
         "error"
       );
 
       fallback.hidden = false;
 
-      console.warn(
-        "Contact request failed:",
-        error
-      );
-
     } finally {
 
-      sendButton.disabled = false;
+      clearTimeout(timeout);
 
-      sendButton.textContent = "Send Message ↗";
+      submit.disabled = false;
+      submit.textContent = "Send Message ↗";
 
     }
-
   });
-}
-
-/* ============================
-   PRIVATE OWNER INBOX LINK
-============================ */
-
-// The private inbox link is only shown
-// while viewing the site locally.
-//
-// The backend still requires authentication.
-
-const ownerInbox = document.getElementById("ownerInbox");
-
-if (
-  ownerInbox &&
-  ["localhost", "127.0.0.1"].includes(
-    window.location.hostname
-  )
-) {
-
-  ownerInbox.hidden = false;
-
 }

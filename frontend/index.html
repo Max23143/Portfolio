@@ -1,76 +1,49 @@
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1">
-
-  <meta name="theme-color" content="#090f1b">
-
-  <meta name="description"
-        content="Spandan Neupane — aspiring software developer and De Montfort University student.">
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#09111e">
+  <meta name="description" content="Spandan Neupane — aspiring software developer studying at De Montfort University. View my work, skills, CV and contact details.">
   <title>Spandan Neupane | Software Developer</title>
 
-  <link rel="icon"
-        href="assets/favicon.svg"
-        type="image/svg+xml">
-
-  <link rel="preconnect"
-        href="https://fonts.googleapis.com">
-
-  <link rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="assets/style.css">
   <script src="assets/main.js" defer></script>
 </head>
-
 <body>
 
-<a href="#main" class="skip-link">
-  Skip to content
-</a>
-
-<!-- NAVIGATION -->
+<a class="skip-link" href="#main">Skip to content</a>
 
 <header class="site-header">
   <nav class="container nav" aria-label="Main navigation">
 
-    <a href="#home" class="brand">
-      Spandan<span>.</span>
-    </a>
+    <a class="brand" href="#home">Spandan<span>.</span></a>
 
     <button
-      id="menuToggle"
       class="menu-toggle"
+      id="menuToggle"
       type="button"
-      aria-label="Open menu"
+      aria-expanded="false"
       aria-controls="navLinks"
-      aria-expanded="false">
+      aria-label="Open menu">
       <span></span>
       <span></span>
       <span></span>
     </button>
 
     <div class="nav-links" id="navLinks">
-
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#education">Education</a>
       <a href="cv.html">CV</a>
-
-      <a href="#contact" class="nav-cta">
-        Contact ↗
-      </a>
-
+      <a class="nav-cta" href="#contact">Contact ↗</a>
     </div>
 
   </nav>
@@ -78,731 +51,659 @@
 
 <main id="main">
 
-<!-- HERO SECTION -->
+  <!-- HERO -->
 
-<section class="hero" id="home">
-  <div class="container hero-grid">
+  <section class="hero" id="home">
+    <div class="container hero-grid">
 
-    <div class="hero-copy reveal">
+      <div class="reveal hero-content">
 
-      <p class="eyebrow">
-        <span class="pulse"></span>
-        OPEN TO JUNIOR & GRADUATE OPPORTUNITIES
-      </p>
-
-      <h1>
-        Hi, I'm
-        <span>Spandan Neupane.</span>
-      </h1>
-
-      <h2>
-        Aspiring Software Developer
-        <span class="separator">/</span>
-        Frontend Developer
-      </h2>
-
-      <p class="lead">
-        I create responsive, accessible and thoughtfully
-        designed web experiences. I enjoy solving practical
-        problems with code, improving the details and
-        turning ideas into working applications.
-      </p>
-
-      <div class="button-row">
-
-        <a href="#projects" class="btn btn-primary">
-          Explore My Projects ↗
-        </a>
-
-        <a href="cv.html" class="btn btn-secondary">
-          View My CV ↗
-        </a>
-
-      </div>
-
-      <div class="hero-links">
-
-        <a
-          href="https://github.com/Max23143"
-          target="_blank"
-          rel="noopener noreferrer">
-          GitHub ↗
-        </a>
-
-        <a href="mailto:neupanespandan16@gmail.com">
-          Email ↗
-        </a>
-
-      </div>
-
-    </div>
-
-    <!-- CODE EDITOR ILLUSTRATION -->
-
-    <div class="hero-art reveal">
-
-      <div class="art-tag">
-        BUILD • TEST • IMPROVE
-      </div>
-
-      <div class="editor">
-
-        <div class="editor-top">
-
-          <div class="dots">
-            <i></i>
-            <i></i>
-            <i></i>
-          </div>
-
-          <span>about-me.js</span>
-
-        </div>
-
-        <div class="editor-code" aria-hidden="true">
-
-          <p>
-            <span class="line">01</span>
-            <span class="kw">const</span>
-            developer = {
-          </p>
-
-          <p>
-            <span class="line">02</span>
-            &nbsp; name:
-            <span class="str">"Spandan Neupane"</span>,
-          </p>
-
-          <p>
-            <span class="line">03</span>
-            &nbsp; location:
-            <span class="str">"United Kingdom"</span>,
-          </p>
-
-          <p>
-            <span class="line">04</span>
-            &nbsp; university:
-            <span class="str">"De Montfort University"</span>,
-          </p>
-
-          <p>
-            <span class="line">05</span>
-            &nbsp; focus: [
-          </p>
-
-          <p>
-            <span class="line">06</span>
-            &nbsp;&nbsp;
-            <span class="str">"Frontend"</span>,
-          </p>
-
-          <p>
-            <span class="line">07</span>
-            &nbsp;&nbsp;
-            <span class="str">"Software Engineering"</span>
-          </p>
-
-          <p>
-            <span class="line">08</span>
-            &nbsp; ],
-          </p>
-
-          <p>
-            <span class="line">09</span>
-            &nbsp; mindset:
-            <span class="str">"Keep building"</span>
-          </p>
-
-          <p>
-            <span class="line">10</span>
-            };
-          </p>
-
-          <p>
-            <span class="line">11</span>
-            <span class="comment">
-              // Turning ideas into solutions.
-            </span>
-          </p>
-
-        </div>
-
-        <div class="editor-bottom">
+        <p class="eyebrow">
           <span class="pulse"></span>
-          Available for opportunities
-          <span>UTF-8 · JS</span>
-        </div>
-
-      </div>
-
-      <div class="art-bottom">
-        &lt;/&gt; Making the web better,
-        one project at a time.
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- ABOUT SECTION -->
-
-<section class="section section-alt" id="about">
-  <div class="container">
-
-    <div class="section-head reveal">
-
-      <span class="overline">01 / ABOUT</span>
-
-      <h2>
-        Curious by nature.
-        <em>Driven to build.</em>
-      </h2>
-
-    </div>
-
-    <div class="about-grid">
-
-      <div class="panel about-main reveal">
-
-        <h3>
-          A developer focused on meaningful work.
-        </h3>
-
-        <p>
-          I'm Spandan, an aspiring software developer
-          studying at De Montfort University (2024–2027).
-          I care about creating clear, functional interfaces
-          that feel effortless to use.
+          OPEN TO JUNIOR &amp; GRADUATE OPPORTUNITIES
         </p>
 
-        <p>
-          My projects have helped me practise frontend
-          development with HTML, CSS and JavaScript.
-          I'm also building my understanding of Python,
-          APIs and the systems that power web applications.
+        <h1>Hi, I'm <span>Spandan Neupane.</span></h1>
+
+        <h2>
+          Aspiring Software Developer
+          <span>/</span>
+          Frontend Developer
+        </h2>
+
+        <p class="lead">
+          I create responsive, accessible and thoughtfully
+          designed web experiences. I enjoy solving practical
+          problems with code and turning ideas into polished,
+          working applications.
         </p>
 
+        <div class="button-row">
+          <a class="btn btn-primary" href="#projects">
+            Explore my projects ↗
+          </a>
+
+          <a class="btn btn-outline" href="cv.html">
+            View my CV ↗
+          </a>
+        </div>
+
+        <div class="social-links">
+          <a
+            href="https://github.com/Max23143"
+            target="_blank"
+            rel="noopener noreferrer">
+            GitHub ↗
+          </a>
+
+          <a href="#contact">Let's connect ↗</a>
+        </div>
+
+      </div>
+
+      <!-- CODE ILLUSTRATION -->
+
+      <div class="reveal hero-art"
+           aria-label="Illustrative developer code panel">
+
+        <div class="floating-tag">
+          BUILD • TEST • IMPROVE
+        </div>
+
+        <div class="editor">
+
+          <div class="editor-title">
+            <span class="dots"><i></i><i></i><i></i></span>
+            <span>developer.js</span>
+          </div>
+
+          <div class="editor-code" aria-hidden="true">
+
+            <div>
+              <span class="line-no">01</span>
+              <span class="code-purple">const</span> developer = {
+            </div>
+
+            <div>
+              <span class="line-no">02</span>
+              &nbsp; name:
+              <span class="code-green">"Spandan Neupane"</span>,
+            </div>
+
+            <div>
+              <span class="line-no">03</span>
+              &nbsp; location:
+              <span class="code-green">"United Kingdom"</span>,
+            </div>
+
+            <div>
+              <span class="line-no">04</span>
+              &nbsp; education:
+              <span class="code-green">"DMU"</span>,
+            </div>
+
+            <div>
+              <span class="line-no">05</span>
+              &nbsp; skills: [
+            </div>
+
+            <div>
+              <span class="line-no">06</span>
+              &nbsp;&nbsp;
+              <span class="code-green">"HTML"</span>,
+              <span class="code-green">"CSS"</span>,
+              <span class="code-green">"JavaScript"</span>
+            </div>
+
+            <div>
+              <span class="line-no">07</span>
+              &nbsp; ],
+            </div>
+
+            <div>
+              <span class="line-no">08</span>
+              &nbsp; mindset:
+              <span class="code-green">"Keep building"</span>
+            </div>
+
+            <div>
+              <span class="line-no">09</span>
+              };
+            </div>
+
+            <div>
+              <span class="line-no">10</span>
+              <span class="code-comment">
+                // Ideas → working solutions
+              </span>
+            </div>
+
+          </div>
+
+          <div class="editor-footer">
+            <span class="pulse"></span>
+            Available for opportunities
+            <span>JS · UTF-8</span>
+          </div>
+
+        </div>
+
+        <div class="floating-bottom">
+          &lt;/&gt; One project at a time
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+
+  <section class="section section-alt" id="about">
+    <div class="container">
+
+      <div class="section-head reveal">
+        <p class="overline">01 / ABOUT</p>
+
+        <h2>
+          Curious by nature.
+          <em>Driven to build.</em>
+        </h2>
+      </div>
+
+      <div class="about-grid">
+
+        <article class="panel about-text reveal">
+
+          <h3>Focused on thoughtful development.</h3>
+
+          <p>
+            I'm Spandan, an aspiring software developer studying
+            at De Montfort University from 2024 to 2027.
+            I enjoy creating clear, functional interfaces
+            that are easy to use.
+          </p>
+
+          <p>
+            Building personal projects has helped me develop
+            practical skills in HTML, CSS and JavaScript.
+            I am also expanding my knowledge of Python,
+            APIs and backend concepts.
+          </p>
+
+          <p>
+            I'm looking for opportunities to contribute
+            to a software team, strengthen my problem-solving
+            skills and develop reliable, useful digital products.
+          </p>
+
+          <a class="text-link" href="cv.html">
+            Explore my CV ↗
+          </a>
+
+        </article>
+
+        <div class="about-facts reveal">
+
+          <div class="panel fact">
+            <span class="fact-icon">⌘</span>
+            <div>
+              <strong>Location</strong>
+              <p>United Kingdom</p>
+            </div>
+          </div>
+
+          <div class="panel fact">
+            <span class="fact-icon">◈</span>
+            <div>
+              <strong>Education</strong>
+              <p>De Montfort University · 2024–2027</p>
+            </div>
+          </div>
+
+          <div class="panel fact">
+            <span class="fact-icon">↗</span>
+            <div>
+              <strong>Career interest</strong>
+              <p>Junior &amp; graduate developer roles</p>
+            </div>
+          </div>
+
+          <div class="panel fact">
+            <span class="fact-icon">{ }</span>
+            <div>
+              <strong>Currently exploring</strong>
+              <p>Python, APIs and backend development</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+
+  <section class="section" id="skills">
+    <div class="container">
+
+      <div class="section-head reveal">
+        <p class="overline">02 / SKILLS</p>
+        <h2>Tools I use. <em>Skills I grow.</em></h2>
         <p>
-          I bring curiosity, attention to detail and
-          a practical approach to problem-solving.
-          I'm looking forward to contributing to a
-          professional engineering team and continuing
-          to grow.
+          Technologies I work with and topics
+          I'm actively studying.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+
+        <article class="panel skill reveal">
+          <div class="skill-symbol">HTML</div>
+          <h3>HTML5</h3>
+          <p>Semantic structure, forms and accessible content.</p>
+          <span class="pill">Frontend</span>
+        </article>
+
+        <article class="panel skill reveal">
+          <div class="skill-symbol">CSS</div>
+          <h3>CSS3</h3>
+          <p>Responsive layouts, Flexbox, Grid and visual design.</p>
+          <span class="pill">Frontend</span>
+        </article>
+
+        <article class="panel skill reveal">
+          <div class="skill-symbol">JS</div>
+          <h3>JavaScript</h3>
+          <p>Interactivity, DOM events and user input handling.</p>
+          <span class="pill">Frontend</span>
+        </article>
+
+        <article class="panel skill reveal">
+          <div class="skill-symbol">PY</div>
+          <h3>Python</h3>
+          <p>Programming fundamentals and server-side concepts.</p>
+          <span class="pill pill-learning">Learning</span>
+        </article>
+
+        <article class="panel skill reveal">
+          <div class="skill-symbol">API</div>
+          <h3>FastAPI &amp; APIs</h3>
+          <p>HTTP methods, routing and backend fundamentals.</p>
+          <span class="pill pill-learning">Learning</span>
+        </article>
+
+        <article class="panel skill reveal">
+          <div class="skill-symbol">GIT</div>
+          <h3>Git &amp; GitHub</h3>
+          <p>Source control, repositories and project organisation.</p>
+          <span class="pill">Tools</span>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+
+  <section class="section section-alt" id="projects">
+    <div class="container">
+
+      <div class="section-head reveal">
+        <p class="overline">03 / PROJECTS</p>
+        <h2>Projects worth <em>exploring.</em></h2>
+        <p>
+          Click anywhere on a card to view
+          that project's GitHub repository.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+
+        <article class="panel project reveal">
+          <a
+            class="project-link"
+            href="https://github.com/Max23143/restaurant-ordering-system"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open Restaurant Ordering System on GitHub">
+
+            <div class="project-art restaurant-art">
+              <span>◈</span>
+              <strong>RESTAURANT<br>ORDERING SYSTEM</strong>
+              <small>MENU • ORDERS • UI</small>
+            </div>
+
+            <div class="project-body">
+              <p class="overline">PROJECT / 01</p>
+              <h3>
+                Restaurant Ordering System
+                <span>↗</span>
+              </h3>
+
+              <p>
+                A restaurant-focused application exploring menu
+                presentation, ordering workflows and structured
+                web development.
+              </p>
+
+              <div class="tags">
+                <span>Web application</span>
+                <span>Ordering</span>
+              </div>
+            </div>
+
+          </a>
+        </article>
+
+        <article class="panel project reveal">
+          <a
+            class="project-link"
+            href="https://github.com/Max23143/application"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open Application Project on GitHub">
+
+            <div class="project-art app-art">
+              <div class="app-mock">
+                <div></div>
+                <section>
+                  <b>Application</b>
+                  <i></i><i></i><i></i>
+                </section>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <p class="overline">PROJECT / 02</p>
+
+              <h3>
+                Application Project
+                <span>↗</span>
+              </h3>
+
+              <p>
+                A project exploring application structure,
+                frontend layouts and organising code into
+                manageable files.
+              </p>
+
+              <div class="tags">
+                <span>Development</span>
+                <span>UI design</span>
+              </div>
+            </div>
+
+          </a>
+        </article>
+
+        <article class="panel project reveal">
+          <a
+            class="project-link"
+            href="https://github.com/Max23143/Calculator"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open Calculator on GitHub">
+
+            <div class="project-art calc-art">
+              <div class="calculator-mock">
+                <div>1,248</div>
+
+                <pre>7  8  9  ÷
+4  5  6  ×
+1  2  3  −
+0  .  =  +</pre>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <p class="overline">PROJECT / 03</p>
+
+              <h3>
+                JavaScript Calculator
+                <span>↗</span>
+              </h3>
+
+              <p>
+                A calculator created to practise JavaScript
+                functions, user interactions and input handling.
+              </p>
+
+              <div class="tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+            </div>
+
+          </a>
+        </article>
+
+      </div>
+
+      <p class="more-projects">
+        More projects:
+        <a
+          href="https://github.com/Max23143?tab=repositories"
+          target="_blank"
+          rel="noopener noreferrer">
+          View my GitHub ↗
+        </a>
+      </p>
+
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+
+  <section class="section" id="education">
+
+    <div class="container education-grid">
+
+      <div class="section-head reveal">
+        <p class="overline">04 / EDUCATION</p>
+        <h2>Learning with <em>purpose.</em></h2>
+
+        <p>
+          Applying what I study through hands-on
+          programming projects.
+        </p>
+      </div>
+
+      <div class="panel education-card reveal">
+        <span class="overline">2024 — 2027</span>
+        <h3>De Montfort University</h3>
+        
+
+        <p class="small-muted">
+          Bsc (Hons) Computer Science
         </p>
 
-        <a href="cv.html" class="text-link">
-          Read My CV ↗
+        <a class="text-link" href="cv.html">
+          See my CV ↗
         </a>
-
-      </div>
-
-      <div class="about-facts reveal">
-
-        <div class="fact panel">
-          <span class="fact-icon">⌘</span>
-          <div>
-            <strong>Based in</strong>
-            <p>United Kingdom</p>
-          </div>
-        </div>
-
-        <div class="fact panel">
-          <span class="fact-icon">◈</span>
-          <div>
-            <strong>Education</strong>
-            <p>De Montfort University · 2024–2027</p>
-          </div>
-        </div>
-
-        <div class="fact panel">
-          <span class="fact-icon">↗</span>
-          <div>
-            <strong>Interested in</strong>
-            <p>Junior & graduate developer roles</p>
-          </div>
-        </div>
-
-        <div class="fact panel">
-          <span class="fact-icon">♢</span>
-          <div>
-            <strong>Exploring</strong>
-            <p>Python, APIs and backend development</p>
-          </div>
-        </div>
-
       </div>
 
     </div>
 
-  </div>
-</section>
+  </section>
 
-<!-- SKILLS SECTION -->
+  <!-- CONTACT -->
 
-<section class="section" id="skills">
-  <div class="container">
+  <section class="section section-alt" id="contact">
+    <div class="container contact-grid">
 
-    <div class="section-head reveal">
+      <div class="contact-info reveal">
+        <p class="overline">05 / CONTACT</p>
 
-      <span class="overline">02 / CAPABILITIES</span>
+        <h2>
+          Get in touch.
+          <em>Let's collaborate.</em>
+        </h2>
 
-      <h2>
-        Tools I use.
-        <em>Skills I grow.</em>
-      </h2>
-
-      <p>
-        A transparent look at what I work with
-        and what I'm currently learning.
-      </p>
-
-    </div>
-
-    <div class="skills-grid">
-
-      <article class="panel skill reveal">
-        <div class="skill-icon">HTML</div>
-        <h3>HTML5</h3>
-        <p>Semantic structure, forms and accessible content.</p>
-        <span class="pill">Frontend</span>
-      </article>
-
-      <article class="panel skill reveal">
-        <div class="skill-icon">CSS</div>
-        <h3>CSS3</h3>
-        <p>Responsive design, Flexbox, Grid and visual polish.</p>
-        <span class="pill">Frontend</span>
-      </article>
-
-      <article class="panel skill reveal">
-        <div class="skill-icon">JS</div>
-        <h3>JavaScript</h3>
-        <p>Interactivity, DOM events and user input handling.</p>
-        <span class="pill">Frontend</span>
-      </article>
-
-      <article class="panel skill reveal">
-        <div class="skill-icon">PY</div>
-        <h3>Python</h3>
-        <p>Developing programming and server-side fundamentals.</p>
-        <span class="pill learning">Learning</span>
-      </article>
-
-      <article class="panel skill reveal">
-        <div class="skill-icon">API</div>
-        <h3>FastAPI & APIs</h3>
-        <p>Exploring routing, validation and HTTP requests.</p>
-        <span class="pill learning">Learning</span>
-      </article>
-
-      <article class="panel skill reveal">
-        <div class="skill-icon">Git</div>
-        <h3>Git & GitHub</h3>
-        <p>Project organisation and version control.</p>
-        <span class="pill">Developer Tools</span>
-      </article>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- PROJECTS SECTION -->
-
-<section class="section section-alt" id="projects">
-  <div class="container">
-
-    <div class="section-head reveal">
-
-      <span class="overline">03 / SELECTED WORK</span>
-
-      <h2>
-        Projects worth
-        <em>exploring.</em>
-      </h2>
-
-      <p>
-        Click a project card to open its GitHub repository.
-      </p>
-
-    </div>
-
-    <div class="projects-grid">
-
-      <!-- RESTAURANT PROJECT -->
-
-      <article class="project panel reveal">
+        <p>
+          Interested in a project, graduate opportunity
+          or working together? I'd be happy to hear from you.
+        </p>
 
         <a
-          class="project-main"
-          href="https://github.com/Max23143/restaurant-ordering-system"
+          class="contact-email"
+          href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=neupanespandan16%40gmail.com&amp;su=Portfolio%20Enquiry"
           target="_blank"
           rel="noopener noreferrer">
-
-          <div class="project-graphic graphic-food">
-
-            <span class="graphic-symbol">⌘</span>
-
-            <strong>
-              RESTAURANT
-              ORDERING SYSTEM
-            </strong>
-
-            <small>MENU • ORDERS • MANAGEMENT</small>
-
-          </div>
-
-          <div class="project-body">
-
-            <span class="overline">
-              FEATURED PROJECT / 01
-            </span>
-
-            <h3>
-              Restaurant Ordering System
-              <span>↗</span>
-            </h3>
-
-            <p>
-              A web application exploring restaurant menus,
-              ordering flows and application organisation.
-            </p>
-
-            <div class="tags">
-              <span>Web App</span>
-              <span>Ordering</span>
-              <span>Interface</span>
-            </div>
-
-          </div>
-
+          neupanespandan16@gmail.com ↗
         </a>
 
-      </article>
-
-      <!-- APPLICATION PROJECT -->
-
-      <article class="project panel reveal">
-
-        <a
-          class="project-main"
-          href="https://github.com/Max23143/application"
-          target="_blank"
-          rel="noopener noreferrer">
-
-          <div class="project-graphic graphic-app">
-
-            <div class="mini-dashboard">
-
-              <div class="mini-bar"></div>
-
-              <div class="mini-content">
-
-                <b>Dashboard</b>
-
-                <div class="mini-chart">
-                  <i></i><i></i><i></i><i></i><i></i>
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="project-body">
-
-            <span class="overline">PROJECT / 02</span>
-
-            <h3>
-              Application Project
-              <span>↗</span>
-            </h3>
-
-            <p>
-              A project focused on application layouts,
-              code structure and frontend development.
-            </p>
-
-            <div class="tags">
-              <span>Web Development</span>
-              <span>Layout</span>
-            </div>
-
-          </div>
-
-        </a>
-
-      </article>
-
-      <!-- CALCULATOR PROJECT -->
-
-      <article class="project panel reveal">
-
-        <a
-          class="project-main"
-          href="https://github.com/Max23143/Calculator"
-          target="_blank"
-          rel="noopener noreferrer">
-
-          <div class="project-graphic graphic-calc">
-
-            <div class="mini-calculator">
-
-              <div class="calc-display">
-                1,248
-              </div>
-
-              <div class="calc-keys">
-7 8 9 ÷
-4 5 6 ×
-1 2 3 −
-0 . = +
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="project-body">
-
-            <span class="overline">PROJECT / 03</span>
-
-            <h3>
-              JavaScript Calculator
-              <span>↗</span>
-            </h3>
-
-            <p>
-              A calculator designed to practise JavaScript
-              functions, events and user input.
-            </p>
-
-            <div class="tags">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
-            </div>
-
-          </div>
-
-        </a>
-
-      </article>
-
-    </div>
-
-    <p class="more-projects reveal">
-      More on
-      <a
-        href="https://github.com/Max23143?tab=repositories"
-        target="_blank"
-        rel="noopener noreferrer">
-        my GitHub profile ↗
-      </a>
-    </p>
-
-  </div>
-</section>
-
-<!-- EDUCATION SECTION -->
-
-<section class="section" id="education">
-  <div class="container education-grid">
-
-    <div class="section-head reveal">
-
-      <span class="overline">04 / EDUCATION</span>
-
-      <h2>
-        Learning with
-        <em>purpose.</em>
-      </h2>
-
-      <p>
-        Building a foundation in technology
-        and applying what I learn through
-        practical projects.
-      </p>
-
-    </div>
-
-    <div class="panel education-card reveal">
-
-      <span class="years">2024 — 2027</span>
-
-      <h3>De Montfort University</h3>
-
-      <p>University studies in progress</p>
-
-      <!-- UPDATE WHEN DEGREE IS CONFIRMED -->
-
-      <p class="fine-print">
-        Add your exact degree title and
-        relevant modules here.
-      </p>
-
-      <a href="cv.html" class="text-link">
-        View Complete CV ↗
-      </a>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- CONTACT SECTION -->
-
-<section class="section section-alt" id="contact">
-  <div class="container contact-grid">
-
-    <div class="contact-copy reveal">
-
-      <span class="overline">05 / CONTACT</span>
-
-      <h2>
-        Get in touch.
-        <em>Let's collaborate.</em>
-      </h2>
-
-      <p>
-        Interested in working together, discussing
-        a graduate opportunity or sharing an idea?
-        I'd be happy to hear from you.
-      </p>
-
-      <!-- CONFIRM YOUR PREFERRED EMAIL -->
-
-      <a
-        class="contact-email"
-        href="mailto:neupanespandan16@gmail.com">
-        neupanespandan16@gmail.com ↗
-      </a>
-
-      <div class="contact-buttons">
-
-        <a
-          class="btn btn-primary"
-          href="mailto:neupanespandan16@gmail.com?subject=Portfolio%20Enquiry">
-          Email Me ↗
-        </a>
-
-        <a
-          class="btn btn-secondary"
-          href="cv.html">
-          View My CV ↗
-        </a>
-
+        <div class="button-row">
+
+          <a
+            class="btn btn-primary"
+            href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=neupanespandan16%40gmail.com&amp;su=Portfolio%20Enquiry"
+            target="_blank"
+            rel="noopener noreferrer">
+            Email Me ↗
+          </a>
+
+          <a class="btn btn-outline" href="cv.html">
+            View My CV ↗
+          </a>
+
+        </div>
+
+        <p class="small-muted">
+          Not using Gmail?
+          <a href="mailto:neupanespandan16@gmail.com?subject=Portfolio%20Enquiry">
+            Use your email app ↗
+          </a>
+        </p>
       </div>
 
-      <!-- VISIBLE ON LOCALHOST ONLY -->
-      <!-- PRIVATE OWNER LOGIN REQUIRED -->
+      <!-- WEB3FORMS CONTACT FORM -->
 
-      <a
-        id="ownerInbox"
-        class="owner-inbox"
-        href="http://127.0.0.1:8000/admin/messages"
-        hidden>
-        🔒 View Messages (Private Admin) ↗
-      </a>
+      <form
+        class="panel contact-form reveal"
+        id="contactForm"
+        action="https://api.web3forms.com/submit"
+        method="POST">
+
+        <h3>Send a message</h3>
+
+        <p>
+          Send a message here. If email delivery isn't
+          configured yet, this button will open a
+          prefilled Gmail draft for you to send.
+        </p>
+
+        <!-- Add a REAL Web3Forms key for automatic delivery. -->
+
+        <input
+          type="hidden"
+          name="access_key"
+          id="web3AccessKey"
+          value="YOUR_WEB3FORMS_ACCESS_KEY">
+
+        <input
+          type="hidden"
+          name="subject"
+          value="New portfolio enquiry">
+
+        <input
+          type="hidden"
+          name="from_name"
+          value="Spandan Portfolio">
+
+        <input
+          type="checkbox"
+          name="botcheck"
+          class="botcheck"
+          tabindex="-1"
+          aria-hidden="true"
+          autocomplete="off">
+
+        <label for="contactName">Your name</label>
+
+        <input
+          id="contactName"
+          name="name"
+          type="text"
+          minlength="2"
+          maxlength="100"
+          autocomplete="name"
+          placeholder="Your full name"
+          required>
+
+        <label for="contactEmail">Your email address</label>
+
+        <input
+          id="contactEmail"
+          name="email"
+          type="email"
+          maxlength="254"
+          autocomplete="email"
+          placeholder="you@example.com"
+          required>
+
+        <label for="contactMessage">Message</label>
+
+        <textarea
+          id="contactMessage"
+          name="message"
+          rows="5"
+          minlength="10"
+          maxlength="3000"
+          placeholder="Tell me about your enquiry..."
+          required></textarea>
+
+        <button
+          id="sendButton"
+          type="submit"
+          class="btn btn-primary">
+          Send Message ↗
+        </button>
+
+        <p
+          id="formStatus"
+          class="form-status"
+          role="status"
+          aria-live="polite"></p>
+
+        <a
+          id="emailFallback"
+          class="text-link"
+          href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=neupanespandan16%40gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          hidden>
+          Open Gmail with your message ↗
+        </a>
+
+        <p class="privacy-note">
+          With Web3Forms enabled, submitted information
+          is processed by that third-party service.
+          Please don't include sensitive information.
+        </p>
+
+      </form>
 
     </div>
-
-    <!-- MESSAGE FORM -->
-
-    <form class="panel contact-form reveal" id="contactForm">
-
-      <h3>Send a message</h3>
-
-      <p>
-        The form submits your message to the backend.
-        In local development, a saved message is
-        not an emailed message.
-      </p>
-
-      <label for="contactName">Your name</label>
-
-      <input
-        id="contactName"
-        name="name"
-        type="text"
-        maxlength="100"
-        placeholder="Your full name"
-        autocomplete="name"
-        required>
-
-      <label for="contactEmail">Email address</label>
-
-      <input
-        id="contactEmail"
-        name="email"
-        type="email"
-        maxlength="254"
-        placeholder="you@example.com"
-        autocomplete="email"
-        required>
-
-      <label for="contactMessage">Message</label>
-
-      <textarea
-        id="contactMessage"
-        name="message"
-        rows="5"
-        minlength="10"
-        maxlength="3000"
-        placeholder="Tell me about your enquiry..."
-        required></textarea>
-
-      <button
-        class="btn btn-primary"
-        id="sendButton"
-        type="submit">
-        Send Message ↗
-      </button>
-
-      <p
-        id="formStatus"
-        class="form-status"
-        role="status"
-        aria-live="polite"></p>
-
-      <a
-        id="emailFallback"
-        class="fallback-link"
-        href="mailto:neupanespandan16@gmail.com"
-        hidden>
-        Open an email draft instead ↗
-      </a>
-
-    </form>
-
-  </div>
-</section>
+  </section>
 
 </main>
 
-<!-- FOOTER -->
-
 <footer class="footer">
-
   <div class="container footer-inner">
 
-    <a href="#home" class="brand">
+    <a class="brand" href="#home">
       Spandan<span>.</span>
     </a>
 
     <small>
-      © <span id="year"></span>
-      Spandan Neupane
+      © <span id="year">2026</span> Spandan Neupane
     </small>
 
-    <a href="#home">
-      Back to top ↑
-    </a>
+    <a href="#home">Back to top ↑</a>
 
   </div>
-
 </footer>
 
 </body>

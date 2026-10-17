@@ -2,31 +2,18 @@
 # Python
 __pycache__/
 *.py[cod]
-
-# Virtual environments
-.venv/
 venv/
+.venv/
 
-# Credentials
+# Private credentials and previous stored messages
 .env
 backend/.env
-
-# Private messages
 backend/data/
+backend/message.json
+backend/messages.json
 messages.json
 
-# Local databases
-*.sqlite
-*.db
-
-# Operating system
+# Local developer files
+.vercel/
 .DS_Store
 Thumbs.db
-
-# Vercel
-.vercel/
-
-venv/
-.venv/
-__PYcache__/
-backend/message.json
